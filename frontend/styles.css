@@ -1,0 +1,290 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cd731990;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3rem; /* Added padding to prevent overlap with footer */
+}
+
+/* Header styling */
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #050404ec;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin-left: 3rem;
+    font-size: 2rem;
+    font-family: "Yeseva One", serif;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    margin-left: auto;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 40px;
+}
+
+.menu a {
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Yeseva One", serif;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #ae3f3fe4;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+/* Background section styling */
+.background-section {
+    background-image: url("../assets/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+    padding: 10%;
+}
+
+.background-section h1 {
+    color: rgb(235, 223, 222);
+    font-family: "Merienda", serif;
+    font-size: 3rem;
+    padding: 3%;
+}
+
+.background-section h3 {
+    font-family: "Arizonia", serif;
+    font-size: 3rem;
+    text-align: right;
+    color: #392121;
+}
+
+/* Content section styling */
+.content {
+    max-width:70%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+  
+   
+
+.para1, .para2 {
+    font-family: "Merienda", cursive;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    background: rgba(60, 24, 4, 0.422);
+    color: #cdc8c8;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0px 8px 20px rgba(17, 17, 17, 0.4);
+}
+
+/* Image styling */
+.cup1, .cup2 {
+    width: 150%;
+    margin: 10%;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+
+}
+
+.cup1:hover, .cup2:hover {
+    transform: scale(1.05);
+}
+
+/* Shop page styling */
+.shop-wrapper {
+    padding: 2rem;
+    background-color: 
+    #825b408e;
+}
+
+.shop-title {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.shop-title h1 {
+    font-family: "Merienda", cursive;
+    font-size: 2.5rem;
+    color: #704e3d;
+}
+
+.shop-title p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Product cards */
+/* Updated Product cards layout for horizontal display */
+.shop-products {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.shop-products::-webkit-scrollbar {
+    height: 8px; /* Customize scrollbar height */
+}
+
+.shop-products::-webkit-scrollbar-thumb {
+    background-color: #704e3d; /* Customize scrollbar color */
+    border-radius: 5px;
+}
+
+.shop-products::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-info h3 {
+    font-size: 1.5rem;
+    color: #704e3d;
+}
+
+.product-info .price {
+    font-size: 1.2rem;
+    color: #a07150;
+    margin: 0.5rem 0;
+}
+
+.buy-btn {
+    background-color: #704e3d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #ae3f3f;
+}
+
+
+/* Footer styling */
+
+.foottercontainer{
+    display: flex;
+    flex-direction: column;
+}
+.foottercontainer1{
+    display: flex;
+    flex-direction: row;
+    background-color: #704e3d;
+    padding:5%;
+}
+.intro, .list, .locations, .contact {
+    flex: 1; /* Ensures that all child divs take equal width */
+    margin: 0; /* Removes default margin */
+}
+.intro p{
+    font-family: "Merienda", cursive;
+    font-size: 1.5rem;
+    line-height: 1.5;  
+    color: white;
+}
+
+.list ul, .locations ul, .contact ul {
+    list-style: none;
+    padding: 0%;
+    margin: 0;
+    text-align: left;
+}
+
+.list li, .locations li, .contact li {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-family: "Yeseva One", serif;
+}
+
+.list a, .locations a, .contact a {
+    color: #e6e6e6;
+    text-decoration: none;
+}
+
+.list a:hover, .locations a:hover, .contact a:hover {
+    color: #ae3f3f;
+}
+
+.foottercontainer2{
+   background-color: rgb(11, 11, 11);
+   color: white;
+    text-align: center;
+    width: 100%;
+   padding: 1%;
+}
