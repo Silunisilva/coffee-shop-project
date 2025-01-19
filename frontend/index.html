@@ -9,23 +9,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Merienda:wght@300..900&family=Arizonia&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </head>
 <body>
-   
     <!-- Header Section -->
-    <header>
-        <img class="logo" src="../assets/logo.jpg" alt="Logo">
-        <h1>Coffee House</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <header class="bg-dark text-white py-3 sticky-top">
+        <div class="container d-flex align-items-center justify-content-between">
+            <img class="logo" src="../assets/images/logo.jpg" alt="Logo" width="70" height="70">
+            <h1 class="ms-3">Coffee House</h1>
+            <nav>
+                
+                <ul class="menu list-unstyled d-flex gap-4 mb-0">
+                    <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="shop.html" class="text-white text-decoration-none">Shop</a></li>
+                    <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
+                    <li><a href="locations.html" class="text-white text-decoration-none">Locations</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <div class="wrapper">
@@ -34,84 +37,190 @@
                 <h1>DISCOVER THE TASTE OF REAL COFFEE</h1>
                 <h3>Brewed with Passion, Served with Love</h3>
             </div>
-            
+        
             <!-- Content Section with Paragraphs and Images -->
-
             <section class="content">
-                <div class="content1">
-                     <div><img class="cup1" src="../assets/bg2.jpg" alt="Cup Image"></div>
-                     <div class="para1">
-                    
-                    <p>Your local haven for all things coffee! At Coffee House, we believe in the art of a perfect brew and the power 
-                    of community. Each cup is crafted from sustainably sourced beans, roasted to bring out deep, unique flavors. From your
-                    morning pick-me-up to cozy afternoon catch-ups, Coffee House is where flavor meets comfort.
-                    <br>
-                    Whether you're a connoisseur or just exploring the world of coffee, we have something for everyone—from classic
-                    espressos and silky cappuccinos to seasonal specialties and fresh-baked treats. Step in, sip, and let our friendly
-                    baristas take you on a journey through the best that coffee culture has to offer.
-                    </p>
-                     </div>
+                <div class="content-container">
+                    <div class="content-item">
+                        <img class="cup1" src="../assets/images/shop1.jpg" alt="Cup Image">
+                        <div class="para1">
+                            <p>Your local haven for all things coffee! At Coffee House, we believe in the art of a perfect brew and the power 
+                            of community. Each cup is crafted from sustainably sourced beans, roasted to bring out deep, unique flavors. From your
+                            morning pick-me-up to cozy afternoon catch-ups, Coffee House is where flavor meets comfort.
+                            <br>
+                            Whether you're a connoisseur or just exploring the world of coffee, we have something for everyone—from classic
+                            espressos and silky cappuccinos to seasonal specialties and fresh-baked treats. Step in, sip, and let our friendly
+                            baristas take you on a journey through the best that coffee culture has to offer.
+                            </p>
+                        </div>
                     </div>
-                <div class="content1">
-                <div><img class="cup2" src="../assets/cup2.jpg" alt="Cup Image"></div>
-                <div class="para2">
-                   
-                    <p>Our coffee is not just a beverage but an experience. The richness of our beans, the comfort of our space, and the
-                    warmth of our service together create a relaxing atmosphere where each visit feels like home.
-                    <br>
-                    Come and enjoy the unique journey of flavor and ambiance we offer, and allow us to make your coffee moments truly memorable.
-                    </p>
+        
+                    <div class="content-item">
+                        <img class="cup2" src="../assets/images/shop2.jpg" alt="Cup Image">
+                        <div class="para2">
+                            <p>Our coffee is not just a beverage but an experience. The richness of our beans, the comfort of our space, and the
+                            warmth of our service together create a relaxing atmosphere where each visit feels like home.
+                            <br>
+                            Come and enjoy the unique journey of flavor and ambiance we offer, and allow us to make your coffee moments truly memorable.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+        
+            <!-- Our Coffee Section -->
+            <section class="our-coffee">
+                <h2>Our Coffee</h2>
+                <p>We serve a variety of handcrafted coffee drinks made from the finest beans. Whether you prefer a strong espresso or a smooth latte, we have something to satisfy every taste.</p>
+                <div class="coffee-list">
+                    <div class="coffee-item">
+                        <img src="../assets/images/espresso.jpg" alt="Espresso">
+                        <h3>Espresso</h3>
+                        <p>Bold and rich, made with the finest beans for a truly strong taste.</p>
+                    </div>
+                    <div class="coffee-item">
+                        <img src="../assets/images/latte.jpg" alt="Latte">
+                        <h3>Latte</h3>
+                        <p>Silky and smooth, a perfect balance of espresso and steamed milk.</p>
+                    </div>
+                    <div class="coffee-item">
+                        <img src="../assets/images/cappuccino.jpg" alt="Cappuccino">
+                        <h3>Cappuccino</h3>
+                        <p>Rich and frothy, with a delicious layer of foam on top.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Menu Section -->
+            <section class="menu_list">
+                <h2>Our Menu</h2>
+                <p>From pastries to seasonal specials, we offer a variety of food and drinks to complement your coffee experience.</p>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="../assets/images/croissant.jpg" alt="Croissant">
+                        <h3>Croissant</h3>
+                        <p>Flaky and buttery, the perfect companion to your coffee.</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../assets/images/coffee-cake.jpg" alt="Coffee Cake">
+                        <h3>Coffee Cake</h3>
+                        <p>A moist, flavorful cake that pairs wonderfully with our coffee.</p>
+                    </div>
+                    <div class="menu-item">
+                        <img src="../assets/images/muffin.jpg" alt="Muffin">
+                        <h3>Blueberry Muffin</h3>
+                        <p>A sweet treat packed with fresh blueberries for the perfect snack.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Customer Reviews Section -->
+            <section class="reviews">
+                <h2>What Our Customers Are Saying</h2>
+                <div class="review-list">
+                    <div class="review-item">
+                        <p>"Best coffee in town! The atmosphere is cozy, and the staff is always friendly. A must-visit for coffee lovers!"</p>
+                        <h4>- Sarah T.</h4>
+                    </div>
+                    <div class="review-item">
+                        <p>"I can't get enough of their cappuccinos. Perfectly made every time, with the right balance of foam and flavor."</p>
+                        <h4>- James R.</h4>
+                    </div>
+                    <div class="review-item">
+                        <p>"Love the seasonal specials. Always something new to try, and the baristas really know their stuff!"</p>
+                        <h4>- Emily W.</h4>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Special Offers Section -->
+            <section class="special-offers">
+                <h2>Special Offers</h2>
+                <p>Enjoy great deals on your favorite coffee drinks. Check out our latest promotions and discounts below.</p>
+                <div class="offers-list">
+                    <div class="offer-item">
+                        <h3>Buy One Get One Free</h3>
+                        <p>Buy any large coffee, and get a second one free. Offer valid this weekend only!</p>
+                    </div>
+                    <div class="offer-item">
+                        <h3>Free Pastry with Coffee</h3>
+                        <p>Get a free pastry with every purchase of a medium coffee. Enjoy your snack on us!</p>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Newsletter Signup Section -->
+            <section class="newsletter">
+                <h2>Join Our Newsletter</h2>
+                <p>Stay updated with our latest promotions, new menu items, and events. Subscribe to our newsletter today!</p>
+                <form action="#">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </section>
         </main>
+        
+        
     </div>
 
     <!-- Footer Section -->
-    <footer>
-        <div class="foottercontainer">
-            <div class="foottercontainer1">
-                <div class="intro">
-                    <p>"Brewing Happiness, One Cup at a Time. Join us for a coffee experience crafted with passion and care."</p>
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <p class="intro">"Brewing Happiness, One Cup at a Time. Join us for a coffee experience crafted with passion and care."</p>
                 </div>
-                <div class="list">
-                    <ul>
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>About Us</li>
-                        <li>Locatons</li>
-                        <li>contact</li>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="shop.html" class="text-white text-decoration-none">Shop</a></li>
+                        <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="locations.html" class="text-white text-decoration-none">Locations</a></li>
+                        <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
                     </ul>
-                 </div>
-                 <div class="locations">
-                    <ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Locations</h5>
+                    <ul class="list-unstyled">
                         <li>Kaduwela</li>
                         <li>Nugegoda</li>
                         <li>Maharagama</li>
-                        <li>kollupitiya</li>
+                        <li>Kollupitiya</li>
                     </ul>
-                 </div>
-                 <div class="contact">
-                    <h3>Contact Us</h3>
-                    <ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
                         <li>Phone: (123) 456-7890</li>
                         <li>Email: contact@example.com</li>
                     </ul>
                     <div class="social-media">
-                        <a href="" target="_blank" class="social-icon" title="insta">
+                        <a href="#" target="_blank" class="text-white me-3" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="" target="_blank" class="social-icon" title="fb">
+                        <a href="#" target="_blank" class="text-white" title="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
-
                 </div>
             </div>
-            <div class="foottercontainer2">
-                <p>&copy; 2024 Coffee House. All rights reserved.</p>
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902464564812!2d90.4125185154195!3d23.81033279206144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c70f6e9333b7%3A0xe5788d3c48e96ea4!2sCoffee%20Shop!5e0!3m2!1sen!2sbd!4v1627890611535!5m2!1sen!2sbd"
+                        width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </div>
+
+        <div class="footer-bottom bg-dark text-center text-white py-2">
+            <p>&copy; 2024 Coffee House. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

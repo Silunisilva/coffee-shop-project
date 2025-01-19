@@ -7,28 +7,30 @@
 
 /* Basic body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #cd731990;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
+/* Wrapper for proper layout */
 .wrapper {
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
+/* Main content styling */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3rem; /* Added padding to prevent overlap with footer */
+    padding-bottom: 3rem;
 }
 
-/* Header styling */
+/* Header Styling */
 header {
     display: flex;
     align-items: center;
@@ -43,7 +45,7 @@ header {
 header h1 {
     margin-left: 3rem;
     font-size: 2rem;
-    font-family: "Yeseva One", serif;
+    font-family: 'Yeseva One', serif;
     letter-spacing: 3px;
 }
 
@@ -61,7 +63,7 @@ nav {
 .menu a {
     color: white;
     font-size: 1.2rem;
-    font-family: "Yeseva One", serif;
+    font-family: 'Yeseva One', serif;
     text-decoration: none;
 }
 
@@ -75,76 +77,287 @@ nav {
     height: 70px;
 }
 
-/* Background section styling */
+
+
+/* Background Section */
 .background-section {
-    background-image: url("../assets/bg.jpg");
+    background-image: url('../assets/images/bg.jpg');
     background-size: cover;
     background-position: center;
     height: 80vh;
     width: 100%;
     padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(235, 223, 222);
 }
 
 .background-section h1 {
-    color: rgb(235, 223, 222);
-    font-family: "Merienda", serif;
+    font-family: 'Merienda', serif;
     font-size: 3rem;
-    padding: 3%;
 }
 
 .background-section h3 {
-    font-family: "Arizonia", serif;
-    font-size: 3rem;
-    text-align: right;
+    font-family: 'Arizonia', serif;
+    font-size: 2rem;
     color: #392121;
 }
 
-/* Content section styling */
+/* Content Section */
 .content {
-    max-width:70%;
+    padding: 40px 20px;
+    background-color: #f5f5f5; /* Light background for contrast */
+}
+
+/* Container for content items */
+.content-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Individual Content Item */
+.content-item {
+    display: flex;
+    flex: 1;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
+    align-items: center;
+    max-width: 45%; /* Ensure two items don't get too wide on large screens */
+    background-color: #fff; /* White background for content items */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.content1 {
-    display: flex;
-    flex-direction: row-reverse;
-}
-  
-   
-
-.para1, .para2 {
-    font-family: "Merienda", cursive;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    background: rgba(60, 24, 4, 0.422);
-    color: #cdc8c8;
-    border-radius: 10px;
-    padding: 2rem;
-    box-shadow: 0px 8px 20px rgba(17, 17, 17, 0.4);
+.content-item:hover {
+    transform: translateY(-10px); /* Slight hover effect */
 }
 
 /* Image styling */
 .cup1, .cup2 {
-    width: 150%;
-    margin: 10%;
-    border-radius: 10px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.5s ease-in-out;
-
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
 }
 
-.cup1:hover, .cup2:hover {
-    transform: scale(1.05);
+/* Paragraph content styling */
+.para1, .para2 {
+    padding: 20px;
+    text-align: center;
 }
 
-/* Shop page styling */
+.para1 p, .para2 p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+h1, h3 {
+    text-align: center;
+    color: #2d2d2d;
+}
+
+.background-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #2c3e50; /* Dark background for contrast */
+    color: #fff;
+}
+
+.background-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.background-section h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-item {
+        max-width: 90%; /* Ensure each item takes full width on mobile */
+    }
+}
+
+/* New Section Styles */
+
+/* Our Coffee Section */
+.our-coffee {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.our-coffee h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.coffee-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.coffee-item {
+    text-align: center;
+    max-width: 30%;
+}
+
+.coffee-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Menu Section */
+.menu_list {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.menu_list h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.menu-item {
+    text-align: center;
+    max-width: 30%;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Customer Reviews Section */
+.reviews {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.reviews h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.review-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.review-item {
+    max-width: 30%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-item p {
+    font-style: italic;
+}
+
+/* Special Offers Section */
+.special-offers {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.special-offers h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.offers-list {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.offer-item {
+    max-width: 45%;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.offer-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #d35400;
+}
+
+/* Shop Page Styling */
 .shop-wrapper {
     padding: 2rem;
-    background-color: 
-    #825b408e;
+    background-color: #825b408e;
 }
 
 .shop-title {
@@ -153,7 +366,7 @@ nav {
 }
 
 .shop-title h1 {
-    font-family: "Merienda", cursive;
+    font-family: 'Merienda', cursive;
     font-size: 2.5rem;
     color: #704e3d;
 }
@@ -163,8 +376,7 @@ nav {
     color: #555;
 }
 
-/* Product cards */
-/* Updated Product cards layout for horizontal display */
+/* Product Cards Styling */
 .shop-products {
     display: flex;
     gap: 2rem;
@@ -173,18 +385,17 @@ nav {
 }
 
 .shop-products::-webkit-scrollbar {
-    height: 8px; /* Customize scrollbar height */
+    height: 8px;
 }
 
 .shop-products::-webkit-scrollbar-thumb {
-    background-color: #704e3d; /* Customize scrollbar color */
+    background-color: #704e3d;
     border-radius: 5px;
 }
 
 .shop-products::-webkit-scrollbar-track {
     background: #f4f4f4;
 }
-
 
 .product-card {
     background-color: #fff;
@@ -235,41 +446,40 @@ nav {
     background-color: #ae3f3f;
 }
 
-
-/* Footer styling */
-
-.foottercontainer{
+/* Footer Section Styling */
+.footer-container {
     display: flex;
     flex-direction: column;
+    background-color: #704e3d;
+    padding: 5%;
+    color: white;
 }
-.foottercontainer1{
+
+.footer-container1 {
     display: flex;
     flex-direction: row;
-    background-color: #704e3d;
-    padding:5%;
+    justify-content: space-between;
 }
+
 .intro, .list, .locations, .contact {
-    flex: 1; /* Ensures that all child divs take equal width */
-    margin: 0; /* Removes default margin */
+    flex: 1;
+    margin: 0;
 }
-.intro p{
-    font-family: "Merienda", cursive;
+
+.intro p {
+    font-family: 'Merienda', cursive;
     font-size: 1.5rem;
-    line-height: 1.5;  
-    color: white;
+    line-height: 1.5;
 }
 
 .list ul, .locations ul, .contact ul {
     list-style: none;
-    padding: 0%;
-    margin: 0;
-    text-align: left;
+    padding: 0;
 }
 
 .list li, .locations li, .contact li {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
-    font-family: "Yeseva One", serif;
 }
 
 .list a, .locations a, .contact a {
@@ -281,10 +491,9 @@ nav {
     color: #ae3f3f;
 }
 
-.foottercontainer2{
-   background-color: rgb(11, 11, 11);
-   color: white;
+.footer-container2 {
+    background-color: rgb(11, 11, 11);
+    color: white;
     text-align: center;
-    width: 100%;
-   padding: 1%;
+    padding: 1%;
 }
